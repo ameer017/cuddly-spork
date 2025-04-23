@@ -30,13 +30,14 @@ export default function News() {
   }, []);
 
   const filteredData = datas.filter((data) => {
-    const searchTerm =
-      data.name.toLowerCase() ||
-      data.username.toLowerCase() ||
-      data.email.toLowerCase();
-
-    setSearch(searchTerm);
+    const term = search.toLowerCase();
+    return (
+      data.name.toLowerCase().includes(term) ||
+      data.username.toLowerCase().includes(term) ||
+      data.email.toLowerCase().includes(term)
+    );
   });
+  
   return (
     <>
       <Header filteredData={filteredData} search={search} setSearch={setSearch} />
