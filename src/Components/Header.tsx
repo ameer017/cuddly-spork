@@ -13,11 +13,9 @@ const Header = ({ search, setSearch }: HeaderProps) => {
           type="search"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="bg-transparent border border-white outline-none rounded w-4/5 px-2 py-[1px] mr-1 text-white "
+          className="bg-transparent border border-white outline-none rounded w-full px-2 py-[1px] mr-1 text-white "
         />
-        <button className="bg-slate-400 px-2 py-[1px] rounded text-white hover:bg-slate-600 transition-all duration-200 hover:-translate-y-1">
-          Search
-        </button>
+        
       </div>
     </header>
   );
