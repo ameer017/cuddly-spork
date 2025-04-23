@@ -16,7 +16,7 @@ interface MyState {
 export default function News() {
   const [datas, setDatas] = useState<MyState[]>([]);
   const [search, setSearch] = useState("");
-  
+
   const API_URL = "https://jsonplaceholder.typicode.com/users";
 
   useEffect(() => {
@@ -37,10 +37,10 @@ export default function News() {
       data.email.toLowerCase().includes(term)
     );
   });
-  
+
   return (
     <>
-      <Header filteredData={filteredData} search={search} setSearch={setSearch} />
+      <Header search={search} setSearch={setSearch} />
 
       <main className="flex flex-wrap justify-center w-full p-3 items-center gap-4">
         {/* <h1 className="my-3 text-2xl ">Check on the Latest Users</h1> */}

@@ -1,17 +1,9 @@
 interface HeaderProps {
-  data: {
-    id: number;
-    name: string;
-    username: string;
-    email: string;
-    address: string;
-    website: string;
-    phone: number;
-  };
+  search: string;
+  setSearch: React.Dispatch<React.SetStateAction<string>>;
 }
 
-
-const Header = ({filteredData, search, setSearch}: HeaderProps) => {
+const Header = ({ search, setSearch }: HeaderProps) => {
   return (
     <header className="h-52 bg-teal-700 flex items-center justify-center flex-col">
       <h1 className="text-3xl  text-white">JSON Typicode User&apos;s Fetch</h1>
